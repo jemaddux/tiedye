@@ -5,11 +5,9 @@ module Tiedye
     hex = to_6_hex(hex)
     hex_pairs = hex.scan(/.{1,2}/)
     rgb = []
-    puts hex_pairs
-    hex_pairs.each_with_index do |index, hex_pair|
-      puts hex_pair
-      rgb[index] = hex_pair_to_rgb_digit(hex_pair)
-    end
+    rgb[0] = hex_pair_to_rgb_digit(hex_pairs[0])
+    rgb[1] = hex_pair_to_rgb_digit(hex_pairs[1])
+    rgb[2] = hex_pair_to_rgb_digit(hex_pairs[2])
     return rgb
   end
 
@@ -26,7 +24,6 @@ module Tiedye
 
 private
   def self.hex_pair_to_rgb_digit(hex_pair)
-    puts hex_pair
     hexz = hex_pair.split("")
     number  = HEX_DIGIT.key(hexz[0]) * 16
     number += HEX_DIGIT.key(hexz[1])
