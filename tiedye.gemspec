@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["John Maddux"]
   spec.email         = ["jemaddux@gmail.com"]
   spec.description   = %q{Change colors from hex to rgb or named value}
-  spec.summary       = %q{Change colors from hex to rgb or named value}
+  spec.summary       = %q{Colors!}
   spec.homepage      = "https://github.com/jemaddux/tiedye"
   spec.license       = "MIT"
 

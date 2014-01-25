@@ -2,6 +2,4 @@ $:.unshift('.')
 
 require 'minitest/autorun'
 require 'minitest/pride'
-# require "tiedye"
-# require "../lib/tiedye.rb"
 require File.expand_path("../../lib/tiedye.rb", __FILE__)
