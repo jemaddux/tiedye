@@ -2,13 +2,21 @@ require "tiedye/version"
 
 module Tiedye
   def self.to_rgb(hex)
-
+    hex = to_6_hex(hex)
+    hex_pairs = hex.scan(/.{1,2}/)
+    rgb = []
+    puts hex_pairs
+    hex_pairs.each_with_index do |index, hex_pair|
+      puts hex_pair
+      rgb[index] = hex_pair_to_rgb_digit(hex_pair)
+    end
+    return rgb
   end
 
-  def self.to_hex(r, g, b)
-    return "#FF3FFC" if invalid(r, g, b)
+  def self.to_hex(r = "x", g = "x", b = "x")
+    return random_hex if invalid(r, g, b)
     r, g, b = rgb_float_to_int(r, g, b)
-    return hex_digit(r) + hex_digit(g) + hex_digit(b)
+    return "#" + hex_digit(r) + hex_digit(g) + hex_digit(b)
   end
 
   def self.method_missing(name, *args)
@@ -17,6 +25,34 @@ module Tiedye
   end
 
 private
+  def self.hex_pair_to_rgb_digit(hex_pair)
+    puts hex_pair
+    hexz = hex_pair.split("")
+    number  = HEX_DIGIT.key(hexz[0]) * 16
+    number += HEX_DIGIT.key(hexz[1])
+    return number
+  end
+
+  def self.to_6_hex(hex)
+    hex = hex.gsub("#", "")
+    if hex.length == 3
+      letters = hex.split("")
+      hex = ""
+      letters.each do |letter|
+        hex += letter + letter
+      end
+    end
+    return hex
+  end
+
+  def self.random_hex
+    hex = "#"
+    3.times do
+      hex += hex_digit(rand(0..255))
+    end
+    return hex
+  end
+
   def self.hex_digit(digit)
     return HEX_DIGIT[digit / 16] + HEX_DIGIT[digit % 16]
   end
@@ -31,8 +67,13 @@ private
   end
 
   def self.invalid(r, g, b)
-    [r, g, b].each do |x|
-      return true if x > 255 || x < 0
+    begin
+      [r, g, b].each do |x|
+        return true if x == "x"
+        return true if x > 255 || x < 0
+      end
+    rescue
+      return false
     end
     return false
   end
