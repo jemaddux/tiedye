@@ -1,7 +1,5 @@
 # Tiedye
 
-TODO: Write a gem description
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,7 +16,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+  Tiedye.all_colors.count => 504
+
+  Tiedye.all_colors => ["alice_blue", "antique_white", "antique_white1", .....]
+
+  You can call Tiedye.any_named_color.
+
+  Tiedye.alice_blue => "#f0f8ff"
+
+  Tiedye.red => "#ff0000"
+
+  Tiedye.to_rgb("#ff0000") => [255, 0, 0]
+
+  Tiedye.to_hex([255, 0, 0]) => "#FF0000"
+
+  Tiedye.to_hex(255, 0, 0) => "#FF0000"
 
 ## Contributing
 
