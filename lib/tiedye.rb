@@ -25,6 +25,7 @@ module Tiedye
 
   def self.method_missing(name, *args)
     return COLORS[name.to_s.downcase] if COLORS[name.to_s.downcase]
+    return COLORS[name.to_s] if COLORS[name.to_s]
     return name
   end
 
