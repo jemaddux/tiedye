@@ -1,6 +1,6 @@
 # Tiedye
 
-https://travis-ci.org/jemaddux/tiedye.svg?branch=master
+[![Build Status](https://travis-ci.org/jemaddux/tiedye.svg?branch=master)](https://travis-ci.org/jemaddux/tiedye)
 
 ## Installation
 
