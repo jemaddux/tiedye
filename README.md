@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/jemaddux/tiedye.svg?branch=master)](https://travis-ci.org/jemaddux/tiedye)
 [![Code Climate](https://codeclimate.com/github/jemaddux/tiedye/badges/gpa.svg)](https://codeclimate.com/github/jemaddux/tiedye)
+[![Test Coverage](https://codeclimate.com/github/jemaddux/tiedye/badges/coverage.svg)](https://codeclimate.com/github/jemaddux/tiedye)
 
 ## Installation
 
