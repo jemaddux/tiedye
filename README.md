@@ -1,5 +1,7 @@
 # Tiedye
 
+https://travis-ci.org/jemaddux/tiedye.svg?branch=master
+
 ## Installation
 
 Add this line to your application's Gemfile:
