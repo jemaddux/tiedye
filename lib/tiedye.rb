@@ -6,13 +6,6 @@ module Tiedye
     hex = [hex[0..1], hex[2..3], hex[4..5]]
     options = {"FF" => 255, "00" => 0}
     return hex.collect{|h| options[h]}
-    # hex = to_6_hex(hex)
-    # hex_pairs = hex.scan(/.{1,2}/)
-    # rgb = []
-    # rgb[0] = hex_pair_to_rgb_digit(hex_pairs[0])
-    # rgb[1] = hex_pair_to_rgb_digit(hex_pairs[1])
-    # rgb[2] = hex_pair_to_rgb_digit(hex_pairs[2])
-    # return rgb
   end
 
   def self.to_hex(r = "x", g = "x", b = "x")
@@ -602,11 +595,3 @@ private
     "yellow4" => "#8b8b00",
     "yellow_green" => "#9acd32"}
 end
-
-
-
-
-
-
-
-
