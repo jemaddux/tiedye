@@ -45,3 +45,7 @@ Or install it yourself:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Author
+
+Authored by John Maddux. [jemaddux.com](https://jemaddux.com/)
