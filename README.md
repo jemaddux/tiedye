@@ -18,7 +18,7 @@ Or install it yourself:
 
     $ gem build tiedye.gemspec 
 
-    $ gem push tiedye-0.1.2.gem
+    $ gem push tiedye-0.2.3.gem
 
 ## Usage
 
