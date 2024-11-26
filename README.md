@@ -20,6 +20,12 @@ Or install it yourself:
 
     $ gem install tiedye
 
+## Building
+
+    $ gem build tiedye.gemspec 
+
+    $ gem push tiedye-0.1.2.gem
+
 ## Usage
 
   Tiedye.all_colors.count => 504
