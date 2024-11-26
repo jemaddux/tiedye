@@ -16,6 +16,8 @@ Or install it yourself:
 
 ## Building
 
+    # Update Tiedye::Version
+
     $ gem build tiedye.gemspec 
 
     $ gem push tiedye-0.2.3.gem
