@@ -30,13 +30,13 @@ module Tiedye
     return COLORS.keys
   end
 
-private
   def self.hex_pair_to_rgb_digit(hex_pair)
     hexz = hex_pair.upcase.split("")
     number  = HEX_DIGIT.key(hexz[0]) * 16
     number += HEX_DIGIT.key(hexz[1])
     return number
   end
+  private_class_method :hex_pair_to_rgb_digit
 
   def self.to_6_hex(hex)
     hex = hex.gsub("#", "")
@@ -49,6 +49,7 @@ private
     end
     return hex
   end
+  private_class_method :to_6_hex
 
   def self.random_hex
     hex = "#"
@@ -57,10 +58,12 @@ private
     end
     return hex
   end
+  private_class_method :random_hex
 
   def self.hex_digit(digit)
     return HEX_DIGIT[digit / 16] + HEX_DIGIT[digit % 16]
   end
+  private_class_method :hex_digit
 
   def self.rgb_float_to_int(r, g, b)
     if r.class == Float && r <= 1 && g <= 1 && b <= 1
@@ -70,6 +73,7 @@ private
     end
     return [r, g, b]
   end
+  private_class_method :rgb_float_to_int
 
   def self.invalid(r, g, b)
     begin
@@ -82,6 +86,7 @@ private
     end
     return false
   end
+  private_class_method :invalid
 
   HEX_DIGIT = {
     0  => "0", 1  => "1", 2  => "2", 3  => "3", 4  => "4",
