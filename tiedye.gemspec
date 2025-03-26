@@ -23,5 +23,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", ">= 2.2.33"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "minitest", "~> 4.7.3"
-  spec.add_development_dependency "codeclimate-test-reporter"
 end
